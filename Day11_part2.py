@@ -244,9 +244,14 @@ for y in range(high_y, low_y - 1, -1):
 	line = ""
 	for x in range(low_x, high_x+1):
 		if (x,y) in hull.keys():
-			line += str(hull[x,y])
+			char = hull[x,y]
 		else:
-			line += '0'
+			char = 0
+		if char == 1:
+			line += '#'
+		else:
+			line += ' '
+			
 	print(line)
 
 
